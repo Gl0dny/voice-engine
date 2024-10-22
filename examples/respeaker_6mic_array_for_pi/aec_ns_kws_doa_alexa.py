@@ -3,6 +3,11 @@ Record audio from a 6 microphone array, and then search the keyword "snowboy".
 After finding the keyword, Direction Of Arrival (DOA) is estimated.
 
 The hardware is respeaker 6 mic array for raspberry pi.
+
+Hands-free Voice Assistant with Snowboy and Alexa Voice Service. The wake-up keyword is "alexa"
+
+Requirement:
+    pip install avs
 """
 
 import signal
@@ -39,10 +44,9 @@ def main():
 
     def on_detected(keyword):
         direction = doa.get_direction()
-        pixel_ring.wakeup(direction)
         print('detected {} at direction {}'.format(keyword, direction))
         alexa.listen()
-        pixel_ring.wakeup(direction)
+        pixel_ring.wakeup((direction + 0) % 360)
 
     kws.on_detected = on_detected
 
