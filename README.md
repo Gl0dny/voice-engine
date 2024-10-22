@@ -68,7 +68,7 @@ The topology can be:
 ```
 Source --> ChannelPicker --> KWS          Source --> ChannelPicker --> KWS --> Alexa
   |                          /\
-  V                        /   \
- DOA                   Alexa   Google Asissitant 
+  V                         /  \
+ DOA                   Alexa   Google Assistant 
   
 ```
