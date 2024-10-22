@@ -2,7 +2,13 @@
 Record audio from a 6 microphone array, and then search the keyword "snowboy".
 After finding the keyword, Direction Of Arrival (DOA) is estimated.
 
-The hardware is respeaker 6 mic array for raspberry pi.
+ReSpeaker 6 Mic Array for Raspberry Pi 
+have 8 input channels with 6 microphones and 2 channels' playback-loopback.
+In this application, we use 1 channel microphone data and 1 channel playback-loopback data
+to do AEC (Acoustic Echo Cancellation). The algorithm is from Speex.
+
+Requirement:
+    pip install speexdsp
 """
 
 import signal
