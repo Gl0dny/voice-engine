@@ -23,7 +23,7 @@ def main():
     src = Source(rate=16000, frames_size=320, channels=8)
     ec = EC(channels=src.channels, capture=0, playback=7)
     ns = NS(rate=src.rate, channels=1)
-    kws = KWS()
+    kws = KWS(model='snowboy', sensitivity=0.6, verbose=True)
     doa = DOA(rate=16000, chunks=20)
 
     # data flow between elements

@@ -23,8 +23,6 @@ sudo apt install python-pyaudio python-numpy python-virtualenv
 sudo apt-get install swig python-dev libatlas-base-dev build-essential make
 git clone --depth 1 https://github.com/Kitt-AI/snowboy.git
 cd snowboy
-virtualenv --system-site-packages env
-source env/bin/activate
 python setup.py build
 python setup.py bdist_wheel
 pip install dist/snowboy*.whl
