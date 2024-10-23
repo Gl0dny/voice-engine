@@ -11,7 +11,7 @@ import numpy as np
 from voice_engine.element import Element
 from voice_engine.gcc_phat import gcc_phat
 
-SOUND_SPEED = 340.0
+SOUND_SPEED = 343.0
 
 MIC_DISTANCE_6 = 0.09218
 MAX_TDOA_6 = MIC_DISTANCE_6 / float(SOUND_SPEED)
